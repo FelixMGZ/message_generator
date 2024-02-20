@@ -13,7 +13,7 @@ const luckToday = () => {
 } 
 
 const healthMessage = () => {
-    const num = Math.floor(Math.random() * 4 + 1);
+    const num = Math.floor(Math.random() * 3 + 1);
     switch (num){
         case 1:
             return 'la fortuna te acompañara en cada paso hacia una salud radiante y duradera.'
@@ -30,7 +30,7 @@ const healthMessage = () => {
 }
 
 const moneyMessage = () => {
-    const num = Math.floor(Math.random() * 4 + 1);
+    const num = Math.floor(Math.random() * 3 + 1);
     switch (num){
         case 1:
             return 'la fortuna te sonríe y tus esfuerzos financieros se vean recompensados con abundancia y prosperidad.'
@@ -47,7 +47,7 @@ const moneyMessage = () => {
 }
 
 const loveMessage = () => {
-    const num = Math.floor(Math.random() * 4 + 1);
+    const num = Math.floor(Math.random() * 3 + 1);
     switch (num){
         case 1:
             return 'la suerte te guía hacia un amor sincero y duradero que llena tu vida de felicidad y plenitud'
@@ -63,9 +63,23 @@ const loveMessage = () => {
     }
 }
 
+const message = () => {
 
+    console.log(luckToday())
+
+    if (luckToday() === 'health'){
+        return healthMessage()
+    }
+    else if (luckToday() === 'money'){
+        return moneyMessage()
+    }
+    else if (luckToday() === 'love'){
+        return loveMessage()
+    }
+
+}
 
 //console.log(randomNumber());
 //console.log(luckToday());
 
-console.log(healthMessage())
+console.log(message())
