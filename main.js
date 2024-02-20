@@ -1,9 +1,17 @@
 //theme: health, money and love.
+
 const randomNumber = () => {
-    return Math.floor(Math.random() * 5) + 1;
+    return Math.floor(Math.random() * 3);
 }
 
-// Ejemplo de uso
-console.log(randomNumber
-    ());
+const luckToday = () => {
+
+    const luck = ['health' , 'money', 'love']
+
+    return luck[randomNumber()]
+
+}
+
+console.log(randomNumber());
+console.log(luckToday());
 
